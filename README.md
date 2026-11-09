@@ -16,4 +16,4 @@ WoW-Market lets players record merchant inventory while opening merchants normal
 - [Source architecture and Wowhead integration gates](QUELLEN_ARCHITEKTUR_DE.md)
 - [Changelog](CHANGELOG.md)
 
-**Source is visible.** No licence is granted for reusing original code until the owner selects and publishes a code licence. This is independent of CC BY-SA 4.0 obligations for any attributed Everloot-derived data distributed separately. All trademarks belong to their respective owners. Not affiliated with or endorsed by Blizzard, Wowhead, Everloot, ForeverDB or QuestieDB.
+**Source is publicly visible.** A code licence has **not** yet been selected. See [code-licence decision (German)](LIZENZ_ENTSCHEIDUNG_DE.md). No permission to reuse original code is implied solely by public visibility. This is independent of CC BY-SA 4.0 obligations for any attributed Everloot-derived data distributed separately. All trademarks belong to their respective owners. Not affiliated with or endorsed by Blizzard, Wowhead, Everloot, ForeverDB or QuestieDB.

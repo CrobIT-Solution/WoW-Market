@@ -32,8 +32,8 @@ Stand 09.11.2026 · Entwicklungsstand Alpha 0.0.8, **KEINE Rechts-/Blizzard-Abna
 
 ## Lizenz- und Repositoryentscheidung
 
-- Vorhandenes Repo: **CrobIT-Solution/WoW-Market**, aktuell **INTERNAL** (fuer die spaetere Veroeffentlichung auf **PUBLIC** umstellen). Der Alpha-0.0.8-Quellcode wird direkt in `main` gepflegt; vor einer oeffentlichen Veroeffentlichung muss das Repository auf PUBLIC umgestellt und kontrolliert werden. Keine Actions oder oeffentlicher Release freigegeben.
-- Die eigentliche Code-Lizenz muss der Eigentumer entscheiden: **MIT** ist einfach und erlaubt Forks/Weiterverwendung bei Erhalt der Hinweise; **GPL-3.0** verlangt unter Bedingungen Quellcodeweitergabe; **All Rights Reserved / eigene Lizenz** kann ebenfalls sichtbar und kostenlos angeboten werden, sollte aber klare Nutzungsrechte nennen. Die Blizzard-Regel erzwingt keine bestimmte OSI-Lizenz. Keine Fremdcode-Lizenzen stillschweigend uebernehmen.
+- **Erfuellt:** https://github.com/CrobIT-Solution/WoW-Market ist PUBLIC; der eigene Alpha-0.0.8-Quellcode liegt in `main` (verifiziert 09.11.2026, Quell-Commit `26d88a8050c66a834b8f3dfde02efae4b9219184`). Es wurden weder GitHub-Actions noch ein CurseForge-Release gestartet.
+- Die eigene Code-Lizenz ist eine noch offene Eigentuementscheidung. **MIT** erlaubt auch kommerzielle Weiterverwendung; **GPL-3.0** verpflichtet bei Weitergabe abgeleiteter Programme unter bestimmten Bedingungen zur Quellcodebereitstellung. Optionen, Abgrenzung der Fremddaten und Konsequenzen siehe `LIZENZ_ENTSCHEIDUNG_DE.md`. Die Blizzard-Regel erzwingt keine bestimmte OSI-Lizenz. Keine Fremdcode-Lizenzen stillschweigend uebernehmen.
 - Fuer einen oeffentlichen Repo-Upload muss geprueft werden, dass nur eigene freigegebene Sourcen und lizenzierte Dateien enthalten sind. Externe Datensnapshots mit ungeklärten Rechten bleiben draussen.
 
 ## CurseForge-Schritte nach bestandenen Gates

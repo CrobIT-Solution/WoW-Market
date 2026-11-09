@@ -28,3 +28,22 @@ Nicht ausgefuehrt – diese Punkte koennen nur am echten WoW-Client geprueft wer
 5. Im Quellen-Reiter den QuestieDB-Status und den unveraenderten, kopierbaren WoWHead-Link pruefen.
 
 Dies sind **manuelle** Abnahmeschritte. Sie wurden in dieser Entwicklungsumgebung nicht in einem echten Forever-Client durchgefuehrt.
+
+## Abnahmeprotokoll zum Ausfuellen (echter Client)
+
+Fuer jeden Test eintragen: **PASS / FAIL / NICHT GETESTET**, bei FAIL die angezeigte Lua-Fehlermeldung und den reproduzierbaren Bedienweg dokumentieren. Keine Konto-, Charakternamen oder persoenlichen SavedVariables oeffentlich anhaengen.
+
+| Gate | Ergebnis | Nachweis / Fehlerbeschreibung |
+| --- | --- | --- |
+| Forever-Clientbuild / Interface 16001 bestaetigt | NICHT GETESTET | |
+| Addon startet ohne Lua-Fehler; Minimap-Klick + Rechtsklick | NICHT GETESTET | |
+| Minimap-Position nach /reload erhalten | NICHT GETESTET | |
+| Drei Haendler, mehrere Gegenstaende, Suchtreffer | NICHT GETESTET | |
+| Neustart / SavedVariables-Upgrade ohne Datenverlust | NICHT GETESTET | |
+| WoWHead-Link wird nur kopiert, kein Web-Aufruf | NICHT GETESTET | |
+| Kartenfunktion / Wegpunkt nur per Nutzerklick | NICHT GETESTET | |
+| AH-Scan ausschliesslich auf Klick + Drosselung, kein Kauf | NICHT GETESTET | |
+| QuestieDB optional: mit und ohne Zusatz-Addon | NICHT GETESTET | |
+| Performance grosser Datenbestands- und AH-Abfragen | NICHT GETESTET | |
+
+**Freigaberegel:** Solange ein Pflichtgate NICHT GETESTET oder FAIL ist, kein oeffentlicher WoW-Market-Release. GitHub Public ist nur Quellcode-Veroeffentlichung.

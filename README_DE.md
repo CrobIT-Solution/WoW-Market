@@ -62,3 +62,7 @@ Siehe `VEROEFFENTLICHUNG_DE.md` und `ABNAHME_CHECKLISTE_DE.md`. Die Addon-ZIP-Da
 QuestieDB ist **optional** (`## OptionalDeps: QuestieDB`); WoW-Market funktioniert ohne QuestieDB. Wenn die dokumentierte `LibQuestieDB`-API vorhanden ist, werden lediglich bei sonst unbekannten NPC-/Item-Namen lesende Zusatzinformationen abgerufen. Moegliche Spawn-Hinweise bleiben als **unbestaetigt** markiert; QuestieDB-Zonen-IDs werden nicht in WoW-Karten-IDs umgewandelt und niemals automatisch als Wegpunkt verwendet. Namen werden nur zur Anzeige eingesetzt und nicht in den Referenzbestand kopiert.
 
 Der Everloot-Importer kann mit `--report <Pfad>` eine **aggregierte** Qualitaetsstatistik ohne Reporterkennungen erzeugen. WoWHead bleibt bei ID-Links: Sein Import ist bis zur schriftlichen Freigabe in der Normalisierung gesperrt. Die Quellenarchitektur steht in `QUELLEN_ARCHITEKTUR_DE.md`.
+
+## Quellcode und Freigabe
+
+Der vollstaendige eigene Alpha-0.0.8-Quellcode ist unter https://github.com/CrobIT-Solution/WoW-Market **oeffentlich (Public)** sichtbar. Die Lizenz fuer eigenen Code ist noch nicht festgelegt; Entscheidungsvorlage: `LIZENZ_ENTSCHEIDUNG_DE.md`. Das Addon ist **noch nicht** im echten Forever-Client abgenommen. Keine Freigabe auf CurseForge. Ein echter Import fremder Beobachtungsdaten braucht ein getrenntes Daten-/Lizenzgate.

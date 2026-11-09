@@ -1,17 +1,19 @@
-# GitHub – aktueller Stand am 09.11.2026
+# GitHub-Status – WoW-Market
 
-**Verbindliches Repository:** https://github.com/CrobIT-Solution/WoW-Market
+Stand: 09.11.2026. Verbindliches Repository: https://github.com/CrobIT-Solution/WoW-Market
 
-- Das Repo **existiert** und der GitHub-Connector kann es mittlerweile lesen.
-- `main` wird mit dem vollstaendigen Alpha-0.0.8-Quellstand initialisiert.
-- Sichtbarkeit aktuell: **Internal**, nicht Public. Fuer eine spaetere oeffentliche Addon-Verteilung ist nach Blizzard-Richtlinien **oeffentlich einsehbarer Code** erforderlich.
-- Eine Oeffentlichkeitsumstellung ist **noch nicht** beauftragt oder durchgefuehrt.
-- Es sind keine Actions-Workflows, CI-Builds oder kostenpflichtigen Dienste fuer WoW-Market erforderlich.
+- **Sichtbarkeit: PUBLIC** (am 09.11.2026 ueber die GitHub-Repository-API verifiziert).
+- **Branch: main**, Quellcode-Import Alpha 0.0.8: `26d88a8050c66a834b8f3dfde02efae4b9219184`.
+- Enthalten: eigene Lua-Addonquellen, `.toc`, eigene Python-Importer, synthetische Tests und Dokumentation.
+- Nicht enthalten: API-Schluessel, SavedVariables, Rohdaten mit Reporterkennungen, fremde WoWHead-/QuestieDB-Datensammlungen und ungepruefte Grafikdateien.
+- Keine automatisierten GitHub-Actions, Builds oder kostenpflichtigen Dienste notwendig.
+- Das Repository liegt bei der Organisation CrobIT-Solution, der **Addon- und Produktname lautet ausschliesslich WoW-Market**.
 
-## Vorgepruefter Quellstand
+## Aktuell offene Schritte
 
-Der Stand **Alpha 0.0.8** liegt im ZIP `WoWMarket_Alpha_0.0.8_Repo_Erstimport.zip` vor. Es enthaelt `WoWMarket/`, `DataAgent/`, `Tests/`, die Projekt-READMEs, Datenquellen- und Lizenzinformationen, Changelog und die Abnahmedokumentation. Es enthaelt **keine** echten Everloot-Rohdaten, SavedVariables, Zugangsschluessel, privaten Daten oder WoWHead-Kopien.
+1. Der Eigentümer legt die Lizenz **fuer eigenen Code** explizit fest. Siehe [LIZENZ_ENTSCHEIDUNG_DE.md](LIZENZ_ENTSCHEIDUNG_DE.md). Bis dahin gilt keine stillschweigende MIT-/GPL-Lizenz.
+2. Echten WoW-Forever-Client-Test und Performancepruefung anhand [ABNAHME_CHECKLISTE_DE.md](ABNAHME_CHECKLISTE_DE.md) durchfuehren. **Nicht erfolgt.**
+3. Vor einem echten Fremddatenimport Herkunft, Weiterverbreitungsrechte, korrekte Attribution und Datenlizenz getrennt pruefen. Referenz-Haendlerbestand derzeit leer.
+4. Erst nach den erforderlichen Gates ueber eine CurseForge-Alpha entscheiden.
 
-Manueller Upload bei Bedarf: ZIP lokal entpacken; im Repository **Add file -> Upload files** waehlen und die Ordner/Dateien des entpackten Pakets angeben. GitHub kann auch mehrere Dateien/Ordner per Drag-and-Drop annehmen. Die vorhandene README soll dabei durch die neue Alpha-0.0.8-README ersetzt werden. Noch keine Actions und keinen Release ausloesen. Sicherer waere eine isolierte Branch-/PR-Erstbefuellung, wenn ein geeignetes Upload-Werkzeug zur Verfuegung steht.
-
-**Wichtig:** Ein GitHub-Code-Upload ist keine Freigabe auf CurseForge. Code-Lizenz, Third-Party-Rechte, Echt-Client-Test und Release-Gates bleiben offen.
+**Wichtig:** Public GitHub-Code ist nicht gleich CurseForge-Release oder eine formale Freigabe durch Blizzard.
