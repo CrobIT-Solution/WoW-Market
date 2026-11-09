@@ -1,5 +1,7 @@
 # WoW-Market – WoW Forever
 
+> **Alpha 0.0.10 – Testbranch, kein CurseForge-Release.** Modernisierte Haendlererfassung, bessere Suche mit ehrlichen Leer-Meldungen, gezielte AH-Preisabfrage per Klick, Test mit 5.000 Auktionen und Kartenbild aus der echten WoW-API nur bei bekannter Karten-ID. Kein externer Haendler-Datenimport. Echte WoW-Forever-Abnahme weiterhin offen.
+
 ## Installation fuer Spieler – ein Ordner
 
 **[WoW-Market Alpha 0.0.8 herunterladen](https://github.com/CrobIT-Solution/WoW-Market/raw/refs/heads/main/Downloads/WoW-Market_Alpha_0.0.8_Install.zip)** — nur das Installations-ZIP, **nicht** "Code → Download ZIP".

@@ -1,6 +1,8 @@
 -- SPDX-License-Identifier: GPL-3.0-only
 local _, ns = ...
 local listener = CreateFrame("Frame")
+local observedLast = "Noch kein Haendler besucht."
+function ns.VendorCaptureStatus() return observedLast end
 local function safeText(value)
     return ns.IsReadable(value) and type(value) == "string" and value or nil
 end
@@ -32,17 +34,53 @@ local function npcID()
     return tonumber(id)
 end
 
+local function merchantCount()
+    local getter = C_MerchantFrame and C_MerchantFrame.GetNumItems
+    if type(getter) == "function" then
+        local ok, value = pcall(getter)
+        if ok and ns.IsReadable(value) and type(value) == "number" then return value end
+    end
+    if type(GetMerchantNumItems) == "function" then
+        local ok, value = pcall(GetMerchantNumItems)
+        if ok and ns.IsReadable(value) and type(value) == "number" then return value end
+    end
+    return nil
+end
+
+local function merchantItemID(index, info)
+    local direct = info and safeNumber(info.itemID)
+    if direct and direct > 0 then return direct end
+    if type(GetMerchantItemID) == "function" then
+        local ok, value = pcall(GetMerchantItemID, index)
+        if ok and safeNumber(value) and value > 0 then return value end
+    end
+    -- Some Forever builds expose item links rather than a usable legacy ID getter.
+    local getter = C_MerchantFrame and C_MerchantFrame.GetItemLink
+    if type(getter) ~= "function" then getter = GetMerchantItemLink end
+    if type(getter) == "function" then
+        local ok, link = pcall(getter, index)
+        if ok and safeText(link) then
+            local id = tonumber(link:match("item:(%d+)"))
+            if id and id >= 1 and id <= 2147483647 then return id end
+        end
+    end
+    return nil
+end
+
 local function scanVendor()
     if not ns.db or (InCombatLockdown and InCombatLockdown()) then return end
     if not C_MerchantFrame or type(C_MerchantFrame.GetItemInfo) ~= "function" then return end
-    if type(GetMerchantNumItems) ~= "function" or type(GetMerchantItemID) ~= "function" then
-        ns.Log("Haendler-API unvollstaendig: kein Scan (Fail-Closed).")
+    local count = safeNumber(merchantCount())
+    if not count then
+        observedLast = "Haendler-API liefert keine lesbare Warenanzahl."
         return
     end
     local name = safeText(UnitName("npc"))
     if not name or name == "" then return end
-    local count = safeNumber(GetMerchantNumItems())
-    if not count or count < 1 or count > 2000 then return end
+    if count < 1 or count > 2000 then
+        observedLast = "Haendler hat noch keine lesbaren Waren (oder zu viele Eintraege)."
+        return
+    end
     local id = npcID()
     local mapID, x, y = position()
     local key = id
@@ -54,9 +92,10 @@ local function scanVendor()
     local items = {}
     local recorded = 0
     for index = 1, count do
-        local itemID = safeNumber(GetMerchantItemID(index))
-        local info = C_MerchantFrame.GetItemInfo(index)
-        if itemID and itemID > 0 and ns.IsReadable(info) and type(info) == "table" then
+        local okInfo, info = pcall(C_MerchantFrame.GetItemInfo, index)
+        if okInfo and ns.IsReadable(info) and type(info) == "table" then
+            local itemID = merchantItemID(index, info)
+            if itemID and itemID > 0 then
             local label = safeText(info.name)
             local price = safeNumber(info.price)
             local quantity = safeNumber(info.stackCount)
@@ -72,9 +111,13 @@ local function scanVendor()
                 }
                 recorded = recorded + 1
             end
+            end
         end
     end
-    if recorded == 0 then return end
+    if recorded == 0 then
+        observedLast = "Haendler geoeffnet, aber keine gueltigen Wareninformationen geladen."
+        return
+    end
     local zone = (GetZoneText and safeText(GetZoneText())) or "Unbekannt"
     local previous = ns.db.observedVendors[key]
     -- A merchant update may show only filtered/partially loaded stock.
@@ -89,6 +132,7 @@ local function scanVendor()
         items = items, observedAt = GetServerTime(),
         observed = true, id = id,
     }
+    observedLast = "Erfasst: " .. name .. " (" .. tostring(recorded) .. " Warenpositionen)"
     if ns.RefreshUI then ns.RefreshUI() end
 end
 

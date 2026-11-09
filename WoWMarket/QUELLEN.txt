@@ -1,4 +1,4 @@
-WoW-Market 0.0.8-alpha (WoW Forever 1.60.1; Interface 16001)
+WoW-Market 0.0.10-alpha (WoW Forever 1.60.1; Interface 16001)
 
 Kostenloses, unabhaengiges WoW-Addon. Keine Verbindung zu Blizzard,
 Wowhead, Everloot, ForeverDB oder QuestieDB.
@@ -12,7 +12,8 @@ Fremde Datensaetze, WoW-Grafiken und Marken sind nicht durch diese Lizenz freige
 
 Referenzdaten in Data/Vendors.lua: AKTUELL KEINE (leere Importdatenbank).
 Lokale Haendlerbeobachtungen: aus manuell geoeffneten Haendlerfenstern,
-SavedVariables bleibt lokal. Auktionen: nur manueller Scan.
+SavedVariables bleibt lokal. Auktionen: nur auf Nutzerklick Vollscan
+(mit Serverlimit) oder gezielte Einzelabfrage eines bekannten Gegenstands.
 
 WoWHead: nur nutzerinitiierte ID-Verweise, kein Kopieren von Seiten oder Daten.
 https://www.wowhead.com/forever/de/

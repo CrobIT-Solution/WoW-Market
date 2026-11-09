@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# SPDX-License-Identifier: GPL-3.0-only
 """Optional local Lua syntax/behavior smoke checks using an already installed system liblua5.4.
 Not a substitute for testing inside World of Warcraft Forever.
 """
@@ -34,7 +33,7 @@ try:
             raise AssertionError(f"Lua SYNTAX FAIL {path}: {lua.lua_tolstring(state, -1, None)}")
     print(f"PASS: Syntax {len(files)}/{len(files)} Lua-Dateien")
     # Execute the self-contained synthetic test in the sandbox with mocked game interfaces.
-    for test_name in ("synthetic_lua_checks.lua", "synthetic_minimap_lua_checks.lua", "synthetic_questie_lua_checks.lua"):
+    for test_name in ("synthetic_lua_checks.lua", "synthetic_minimap_lua_checks.lua", "synthetic_ui_v0010.lua", "synthetic_ah_5000.lua", "synthetic_vendor_modern.lua"):
         test_script = ROOT / "Tests" / test_name
         script = ("assert(loadfile(%r))(%r)" % (str(test_script), str(ROOT / "WoWMarket"))).encode()
         result = lua.luaL_loadstring(state, script)

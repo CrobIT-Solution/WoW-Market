@@ -1,7 +1,7 @@
 -- SPDX-License-Identifier: GPL-3.0-only
 local addonName, ns = ...
 
-ns.version = "0.0.8-alpha"
+ns.version = "0.0.10-alpha"
 ns.reference = (CrobITMarketData and CrobITMarketData.schema == 1) and CrobITMarketData or {
     schema = 1, provider = "keine", attributionUrl = "", license = "", licenseUrl = "", credit = "", dataAsOf = "", vendors = {},
 }

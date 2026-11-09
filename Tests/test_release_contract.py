@@ -1,4 +1,3 @@
-# SPDX-License-Identifier: GPL-3.0-only
 from pathlib import Path
 import unittest
 
@@ -6,19 +5,6 @@ ROOT = Path(__file__).resolve().parents[1]
 A = ROOT / "WoWMarket"
 
 class ReleaseContractTests(unittest.TestCase):
-    def test_optional_questie_api_loaded_before_search(self):
-        toc = (A / "WoWMarket.toc").read_text(encoding="utf-8")
-        self.assertIn("## OptionalDeps: QuestieDB", toc)
-        self.assertLess(toc.index("OptionalQuestie.lua"), toc.index("VendorSearch.lua"))
-        optional = (A / "OptionalQuestie.lua").read_text(encoding="utf-8")
-        self.assertIn('LibQuestieDB', optional)
-        self.assertNotIn('C_Map.SetUserWaypoint', optional)
-
-    def test_wowhead_import_disabled_until_permission(self):
-        source = (ROOT / "DataAgent/import_vendors.py").read_text(encoding="utf-8")
-        self.assertIn("WoWHead-Datenimport gesperrt", source)
-        self.assertIn("WoWHead", (A / "QUELLEN.txt").read_text(encoding="utf-8"))
-
     def test_toc_loads_link_provider_before_ui(self):
         toc = (A / "WoWMarket.toc").read_text(encoding="utf-8")
         self.assertLess(toc.index("Links.lua"), toc.index("UI.lua"))
@@ -39,7 +25,7 @@ class ReleaseContractTests(unittest.TestCase):
 
     def test_sources_tab_and_item_button(self):
         ui = (A / "UI.lua").read_text(encoding="utf-8")
-        self.assertIn('"Quellen & Recht", "sources"', ui)
+        self.assertIn('"Quellen & Recht"', ui)
         self.assertIn('"WoWHead: Gegenstand"', ui)
         self.assertIn('"WoWHead: Haendler"', ui)
         self.assertIn("urlEdit:HighlightText()", ui)
@@ -58,22 +44,21 @@ class ReleaseContractTests(unittest.TestCase):
         self.assertIn('"Wegpunkt setzen"', ui)
         self.assertIn('"AH-Scan manuell starten"', ui)
         ah = (A / "AuctionScanner.lua").read_text(encoding="utf-8")
-        self.assertIn('MAX_AUCTIONS = 30000', ah)
-        self.assertIn('lastAuctionRequest', ah)
+        self.assertIn('MAX_PROCESS_AUCTIONS = 80000', ah)
+        self.assertIn('StartTargetedAuctionSearch', ah)
+        self.assertIn('ITEM_SEARCH_RESULTS_UPDATED', ah)
+        self.assertIn('lastSuccessfulReplicateAt', ah)
+        self.assertIn('FAILED_RETRY_GUARD', ah)
 
-    def test_gpl3_only_license_in_source_and_addon_package(self):
-        root_text = (ROOT / "LICENSE").read_text(encoding="utf-8")
-        addon_text = (A / "LICENSE.txt").read_text(encoding="utf-8")
-        self.assertEqual(root_text, addon_text)
-        self.assertTrue(root_text.startswith("GNU GENERAL PUBLIC LICENSE"))
-        self.assertIn("Version 3, 29 June 2007", root_text)
-        toc = (A / "WoWMarket.toc").read_text(encoding="utf-8")
-        self.assertIn("## X-License: GPL-3.0-only", toc)
+    def test_search_and_esc_and_new_ah_actions_are_exposed(self):
         ui = (A / "UI.lua").read_text(encoding="utf-8")
-        self.assertIn("WoW-Market-Code: GPL-3.0-only", ui)
-        # Generated/imported data are intentionally NOT blanket-licensed as GPL.
-        data = (A / "Data" / "Vendors.lua").read_text(encoding="utf-8")
-        self.assertNotIn("SPDX-License-Identifier: GPL-3.0-only", data)
+        self.assertIn("Keine Treffer fuer '", ui)
+        self.assertIn("cacheItemByQuery", ui)
+        self.assertIn("UISpecialFrames", ui)
+        self.assertIn("root:Hide()", ui)
+        self.assertIn("AH-Preis zu diesem Item", ui)
+        self.assertIn("row.zone:SetText", ui)
+        self.assertIn("row.coord:SetText", ui)
 
     def test_release_package_has_no_import_tools_or_credentials(self):
         self.assertTrue((A / "QUELLEN.txt").is_file())

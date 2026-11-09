@@ -1,4 +1,3 @@
--- SPDX-License-Identifier: GPL-3.0-only
 -- Standalone synthetic Lua behavior test: no WoW client or real game data.
 local path = assert(..., "addon path required")
 _G.unpack = table.unpack
@@ -48,7 +47,8 @@ assert(loadfile(path .. "/Core.lua"))("CrobITMarket", ns)
 assert(loadfile(path .. "/VendorScanner.lua"))("CrobITMarket", ns)
 assert(loadfile(path .. "/VendorSearch.lua"))("CrobITMarket", ns)
 assert(loadfile(path .. "/Links.lua"))("CrobITMarket", ns)
-C_Timer = { After = function(_, callback) callback() end }
+local timers = {}
+C_Timer = { After = function(_, callback) timers[#timers+1] = callback end }
 assert(loadfile(path .. "/MapActions.lua"))("CrobITMarket", ns)
 local auctionCalls = 0
 C_AuctionHouse = {
@@ -141,4 +141,27 @@ assert(ns.db.auctionSnapshot.auctions == 3, "AH snapshot missing")
 assert(ns.AuctionPrice(900001).minUnitCopper == 3000, "AH unit-price math wrong")
 assert(ns.AuctionPrice(900003) == nil, "auction with no buyout should be excluded")
 assert(not ns.StartAuctionScan() and auctionCalls == 1, "15min cooldown not enforced")
+-- One manually selected item can be queried through the separate AH search API.
+local targetedCalls = 0
+C_AuctionHouse.MakeItemKey = function(itemID) return {itemID=itemID, itemLevel=0, itemSuffix=0, battlePetSpeciesID=0} end
+C_AuctionHouse.SendSearchQuery = function(key, sorts, own)
+    assert(key.itemID == 900001 and own == false)
+    targetedCalls = targetedCalls + 1
+end
+C_AuctionHouse.GetNumItemSearchResults = function(key) return 2 end
+C_AuctionHouse.GetItemSearchResultInfo = function(key, index)
+    if index == 1 then return {quantity=2, buyoutAmount=6000} end
+    return {quantity=2, buyoutAmount=3000}
+end
+assert(ns.StartTargetedAuctionSearch(900001), "manual targeted AH query did not start")
+assert(targetedCalls == 1 and not ns.StartTargetedAuctionSearch(900001), "pending targeted query duplicated")
+for _,frame in ipairs(frames) do
+    if frame.registered and frame.registered.ITEM_SEARCH_RESULTS_UPDATED then
+        frame.OnEvent(frame, "ITEM_SEARCH_RESULTS_UPDATED", {itemID=900001})
+    end
+end
+local quote=ns.AuctionPrice(900001)
+assert(quote and quote.minUnitCopper==1500 and quote.source=="Einzelabfrage", "targeted price incorrect")
+assert(not ns.StartTargetedAuctionSearch(900001), "target query guard missing")
+assert(ns.VendorCaptureStatus():find("Erfasst:",1,true)~=nil, "merchant capture status missing")
 print("PASS: bounded priority search, explicit safe map/waypoint, manual AH snapshot, buyout math, scan throttle, plus source links and Wowhead IDs validated, preserved legacy data, captured merchant, non-destructive partial updates, observed price priority, ID search, batch size, provenance, special costs")

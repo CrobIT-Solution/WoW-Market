@@ -1,5 +1,7 @@
 # WoW-Market
 
+> **Alpha 0.0.10 testing branch (not a CurseForge release).** Updated UI, clear empty-search feedback, modern merchant API fallbacks, on-click AH item-price lookup, safe 5,000-auction full scan handling, and a read-only preview of actual in-game map tiles for verified map IDs. External reference vendor database remains empty. Real WoW Forever in-client acceptance is still required.
+
 ## Install in 3 steps (Alpha test build)
 
 **[Download WoW-Market installation ZIP](https://github.com/CrobIT-Solution/WoW-Market/raw/refs/heads/main/Downloads/WoW-Market_Alpha_0.0.8_Install.zip)** — do **not** use GitHub's "Code → Download ZIP" because that also includes developer files.

@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.0.10-alpha – 09.11.2026 (separater Testbranch)
+- Suche: klare Fehlermeldung bei unbekanntem Namen, Kennzeichnung von Item-Clientcache statt erfundener Haendler.
+- Haendler: moderne C_MerchantFrame-Anbindung und ID-Erkennung aus Link, keine schreibenden Spielhandlungen.
+- UI: Fantasy-Gestaltung, Zone/Koordinaten/Status-Spalten, echte WoW-Kartenkunst bei bekannter Karten-ID, ESC/X-Fix.
+- Auktionshaus: Einzelpreisabfrage nur auf Klick und bei offenem AH; keine Umgehung des 15-Minuten-Serverlimits bei Vollscans. Unvollstaendige Abfragen ueberschreiben keinen gueltigen Snapshot.
+- Synthetische 5.000-Auktionen-, Cache-, UI-, Haendler- und Negativtests bestanden. Noch KEINE Ingame-Freigabe oder echte Referenzdaten.
+
+
 ## Unreleased – Einfachere Spielerinstallation
 - Ein manuelles Installations-ZIP mit genau einem Addon-Ordner `AddOns/WoWMarket/` bereitgestellt; Nutzer kopieren `AddOns` direkt nach `Interface`.
 - Entwicklerdateien und Rohdaten vom Spielerdownload getrennt; direkte Downloadlinks, Installations-Kurzanleitung und separater Offline-Paketgenerator ergaenzt.
