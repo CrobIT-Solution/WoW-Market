@@ -1,3 +1,4 @@
+-- SPDX-License-Identifier: GPL-3.0-only
 -- Mocked public QuestieDB API; the addon must never copy QuestieDB into its own data.
 local path = assert(...)
 local ns = {}

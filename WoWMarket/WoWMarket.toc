@@ -3,6 +3,7 @@
 ## Notes: Haendler, Waren, Orte und Auktionshauspreise fuer WoW Forever
 ## Version: 0.0.8-alpha
 ## Author: CrobIT-Solution
+## X-License: GPL-3.0-only
 ## SavedVariables: CrobITMarketDB
 ## OptionalDeps: QuestieDB
 

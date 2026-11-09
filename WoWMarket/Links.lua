@@ -1,3 +1,4 @@
+-- SPDX-License-Identifier: GPL-3.0-only
 -- Deterministische, rein lokale URL-Erzeugung. Keine Web-Anfragen, kein Browserstart.
 local _, ns = ...
 

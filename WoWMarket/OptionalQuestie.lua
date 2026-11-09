@@ -1,3 +1,4 @@
+-- SPDX-License-Identifier: GPL-3.0-only
 -- Optional, read-only QuestieDB hints. No QuestieDB data are redistributed.
 -- QuestieDB zone IDs and spawn pairs are NOT WoW C_Map uiMapIDs/user waypoints.
 local _, ns = ...

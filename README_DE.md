@@ -66,3 +66,7 @@ Der Everloot-Importer kann mit `--report <Pfad>` eine **aggregierte** Qualitaets
 ## Quellcode und Freigabe
 
 Der vollstaendige eigene Alpha-0.0.8-Quellcode ist unter https://github.com/CrobIT-Solution/WoW-Market **oeffentlich (Public)** sichtbar. Die Lizenz fuer eigenen Code ist noch nicht festgelegt; Entscheidungsvorlage: `LIZENZ_ENTSCHEIDUNG_DE.md`. Das Addon ist **noch nicht** im echten Forever-Client abgenommen. Keine Freigabe auf CurseForge. Ein echter Import fremder Beobachtungsdaten braucht ein getrenntes Daten-/Lizenzgate.
+
+## Lizenz des eigenen Quellcodes
+
+Der eigene WoW-Market-Addoncode, die Python-Werkzeuge und die Tests stehen unter **GNU GPL Version 3, nur Version 3** (`GPL-3.0-only`). Volltext: [`LICENSE`](LICENSE). Fuer die Weitergabe mit dem Addon liegt eine weitere Kopie unter `WoWMarket/LICENSE.txt`. Copyright (C) 2026 CrobIT-Solution und WoW-Market-Mitwirkende fuer ihre jeweiligen Originalbeitraege. Die Codelizenz gilt nicht fuer fremde Haendlerdaten, Blizzard-Spielegrafiken oder Marken. Details: [`LIZENZ_ENTSCHEIDUNG_DE.md`](LIZENZ_ENTSCHEIDUNG_DE.md).

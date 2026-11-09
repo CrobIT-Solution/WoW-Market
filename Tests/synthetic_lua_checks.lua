@@ -1,3 +1,4 @@
+-- SPDX-License-Identifier: GPL-3.0-only
 -- Standalone synthetic Lua behavior test: no WoW client or real game data.
 local path = assert(..., "addon path required")
 _G.unpack = table.unpack

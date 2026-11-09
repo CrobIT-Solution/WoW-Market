@@ -1,3 +1,4 @@
+-- SPDX-License-Identifier: GPL-3.0-only
 local _, ns = ...
 local function lower(value)
     return string.lower(tostring(value or ""))

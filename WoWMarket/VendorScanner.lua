@@ -1,3 +1,4 @@
+-- SPDX-License-Identifier: GPL-3.0-only
 local _, ns = ...
 local listener = CreateFrame("Frame")
 local function safeText(value)

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """Optional one-vendor API schema probe (no bulk downloads).
 
 Runs ONLY when user has a provider-approved FOREVERDB_API_KEY.

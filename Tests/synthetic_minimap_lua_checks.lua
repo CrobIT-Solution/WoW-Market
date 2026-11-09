@@ -1,3 +1,4 @@
+-- SPDX-License-Identifier: GPL-3.0-only
 -- WoW-Market Minimap-UI: rein synthetischer Test ohne WoW-Client.
 local path = assert(...)
 local frames = {}

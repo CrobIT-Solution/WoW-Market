@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """Optional local Lua syntax/behavior smoke checks using an already installed system liblua5.4.
 Not a substitute for testing inside World of Warcraft Forever.
 """

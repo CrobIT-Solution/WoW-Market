@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """Bounded, explicit download of Everloot public vendor pages (stdlib only).
 
 User-initiated network operation, not a background agent. No credentials,

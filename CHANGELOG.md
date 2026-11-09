@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased – Lizenzierung
+- Eigenen Addoncode, Python-Werkzeuge und Tests unter GPL-3.0-only gestellt.
+- Volltext unter `LICENSE` und `WoWMarket/LICENSE.txt`; TOC und Reiter „Quellen & Recht“ aktualisiert.
+- Fremddaten (Everloot: CC BY-SA 4.0), Spielinhalte und Marken aus der Codelizenz ausgenommen.
+- Keine Aenderung an Spielautomatisierung, kein Datenimport, kein CurseForge-Release oder echter Client-Test.
+
 ## 0.0.8-alpha – 09.11.2026
 - Optionale, nur lesende QuestieDB-Lua-Anbindung zur Namenssuche und vorsichtigen Spawn-Hinweisen; keine Datenkopie oder ungeprueften Kartenmarker.
 - Suchtreffer und Detailansicht kennzeichnen aus QuestieDB ergaenzte Namen und nicht bestaetigte Standorthinweise.

@@ -1,3 +1,4 @@
+-- SPDX-License-Identifier: GPL-3.0-only
 -- Read-only, manually requested AH snapshot. Never posts, bids or buys.
 local _, ns = ...
 local frame = CreateFrame("Frame")

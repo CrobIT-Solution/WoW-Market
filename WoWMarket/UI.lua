@@ -1,3 +1,4 @@
+-- SPDX-License-Identifier: GPL-3.0-only
 local _, ns = ...
 local main, searchInput, titleText, summaryText, footerText, detailText
 local resultRows = {}
@@ -91,6 +92,8 @@ local function showDetail(result)
             "QuestieDB: optionale lesende API-Hinweise (" .. (ns.QuestieAvailable and ns.QuestieAvailable() and "aktiv" or "nicht aktiv") .. "); keine Datenkopie.\n" ..
             "Everloot: https://everloot.app - Spielerbeobachtungen CC BY-SA 4.0 (nur falls eingebunden).\n" ..
             "ForeverDB: https://foreverdb.net - API nur mit genehmigtem Zugang.\n\n" ..
+            "WoW-Market-Code: GPL-3.0-only. Lizenztext: WoWMarket/LICENSE.txt\n" ..
+            "Quellcode: https://github.com/CrobIT-Solution/WoW-Market\n\n" ..
             "WoW-Market ist ein inoffizielles, kostenloses Addon von CrobIT-Solution. " ..
             "Keine Verbindung zu Blizzard, WoWHead oder Datenanbietern. " ..
             "Keine automatischen Kaeufe, kein Datenversand aus dem Addon.")

@@ -11,7 +11,7 @@ Stand: 09.11.2026. Verbindliches Repository: https://github.com/CrobIT-Solution/
 
 ## Aktuell offene Schritte
 
-1. Der Eigentümer legt die Lizenz **fuer eigenen Code** explizit fest. Siehe [LIZENZ_ENTSCHEIDUNG_DE.md](LIZENZ_ENTSCHEIDUNG_DE.md). Bis dahin gilt keine stillschweigende MIT-/GPL-Lizenz.
+1. **Erledigt:** Eigener Code: GPL-3.0-only; Lizenztext in `LICENSE` und `WoWMarket/LICENSE.txt`. Siehe [LIZENZ_ENTSCHEIDUNG_DE.md](LIZENZ_ENTSCHEIDUNG_DE.md).
 2. Echten WoW-Forever-Client-Test und Performancepruefung anhand [ABNAHME_CHECKLISTE_DE.md](ABNAHME_CHECKLISTE_DE.md) durchfuehren. **Nicht erfolgt.**
 3. Vor einem echten Fremddatenimport Herkunft, Weiterverbreitungsrechte, korrekte Attribution und Datenlizenz getrennt pruefen. Referenz-Haendlerbestand derzeit leer.
 4. Erst nach den erforderlichen Gates ueber eine CurseForge-Alpha entscheiden.

@@ -1,3 +1,4 @@
+-- SPDX-License-Identifier: GPL-3.0-only
 -- WoW-Market: eigenstaendiger Minimap-Einstieg ohne externe Bibliotheken.
 -- Links: Fenster anzeigen/verbergen; rechts: Quellen & Rechtliches.
 -- Linke Maustaste ziehen: Symbol um die Minimap verschieben (Winkel wird gespeichert).

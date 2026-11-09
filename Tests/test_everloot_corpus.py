@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-only
 """Faked-only validation of Everloot public vendor record converter."""
 from pathlib import Path
 import sys, unittest, copy

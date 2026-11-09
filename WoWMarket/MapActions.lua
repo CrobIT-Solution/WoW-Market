@@ -1,3 +1,4 @@
+-- SPDX-License-Identifier: GPL-3.0-only
 -- Only explicit user clicks can open the map / replace a user waypoint.
 local _, ns = ...
 local function validPosition(result)

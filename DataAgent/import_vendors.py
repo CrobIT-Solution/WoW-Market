@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """Offline validator & deterministic Lua exporter for user-authorized vendor datasets.
 
 Input is *our own normalized schema*, NOT a claim of ForeverDB's wire JSON layout.

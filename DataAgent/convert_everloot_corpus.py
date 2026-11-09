@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """Offline-only conversion of complete Everloot public *vendor* corpus pages.
 
 Everloot public player observations are CC BY-SA 4.0 (not its game-file layer).

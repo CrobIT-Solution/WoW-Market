@@ -18,8 +18,8 @@
 
 ## Verantwortung bei Veroeffentlichung
 
-Eine sichtbare Quellenzeile allein erteilt keine Rechte zur Uebernahme von fremden Datenbanken. Herkunft und Lizenz muessen je *tatsaechlich* verwendeter Quelle dokumentiert werden. Die Code-Lizenz fuer den selbst entwickelten Lua- und Python-Code ist noch nicht entschieden; bis zur Entscheidung wird keine pauschale Kopier-/Fork-Lizenz behauptet.
+Eine sichtbare Quellenzeile allein erteilt keine Rechte zur Uebernahme von fremden Datenbanken. Herkunft und Lizenz muessen je *tatsaechlich* verwendeter Quelle dokumentiert werden. Der eigene Lua- und Python-Code sowie die Tests stehen unter GPL-3.0-only (vollstaendiger Text in `LICENSE` und `WoWMarket/LICENSE.txt`). Fremdinhalte sind ausgenommen.
 
 ## Trennung von Code- und Datenlizenz
 
-Der Quellcode ist seit 09.11.2026 oeffentlich lesbar. Das ist **noch keine aktive Open-Source-Lizenz** fuer unseren Code. Falls der Eigentuemer z. B. MIT oder GPL-3.0 auswaehlt, gilt diese Wahl **nicht automatisch** fuer Spielerbeobachtungen von Everloot (CC BY-SA 4.0), fuer Marken oder fuer Blizzard-Spieldaten. Noch sind keine Everloot-Beobachtungen im Repository enthalten. Jede zukuenftige Datenauslieferung braucht Lizenz- und Herkunftsnachweise inklusive Bearbeitungskennzeichnung.
+Der eigene WoW-Market-Code ist seit 09.11.2026 oeffentlich einsehbar und wird unter **GPL-3.0-only** lizenziert. Die Codelizenz gilt **nicht** fuer Spielerbeobachtungen von Everloot (CC BY-SA 4.0), fuer Marken oder fuer Blizzard-Spieldaten. Noch sind keine Everloot-Beobachtungen im Repository enthalten. Jede zukuenftige Datenauslieferung braucht Lizenz- und Herkunftsnachweise inklusive Bearbeitungskennzeichnung.

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-only
 from pathlib import Path
 import unittest
 
@@ -59,6 +60,20 @@ class ReleaseContractTests(unittest.TestCase):
         ah = (A / "AuctionScanner.lua").read_text(encoding="utf-8")
         self.assertIn('MAX_AUCTIONS = 30000', ah)
         self.assertIn('lastAuctionRequest', ah)
+
+    def test_gpl3_only_license_in_source_and_addon_package(self):
+        root_text = (ROOT / "LICENSE").read_text(encoding="utf-8")
+        addon_text = (A / "LICENSE.txt").read_text(encoding="utf-8")
+        self.assertEqual(root_text, addon_text)
+        self.assertTrue(root_text.startswith("GNU GENERAL PUBLIC LICENSE"))
+        self.assertIn("Version 3, 29 June 2007", root_text)
+        toc = (A / "WoWMarket.toc").read_text(encoding="utf-8")
+        self.assertIn("## X-License: GPL-3.0-only", toc)
+        ui = (A / "UI.lua").read_text(encoding="utf-8")
+        self.assertIn("WoW-Market-Code: GPL-3.0-only", ui)
+        # Generated/imported data are intentionally NOT blanket-licensed as GPL.
+        data = (A / "Data" / "Vendors.lua").read_text(encoding="utf-8")
+        self.assertNotIn("SPDX-License-Identifier: GPL-3.0-only", data)
 
     def test_release_package_has_no_import_tools_or_credentials(self):
         self.assertTrue((A / "QUELLEN.txt").is_file())

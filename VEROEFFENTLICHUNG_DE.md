@@ -33,7 +33,7 @@ Stand 09.11.2026 · Entwicklungsstand Alpha 0.0.8, **KEINE Rechts-/Blizzard-Abna
 ## Lizenz- und Repositoryentscheidung
 
 - **Erfuellt:** https://github.com/CrobIT-Solution/WoW-Market ist PUBLIC; der eigene Alpha-0.0.8-Quellcode liegt in `main` (verifiziert 09.11.2026, Quell-Commit `26d88a8050c66a834b8f3dfde02efae4b9219184`). Es wurden weder GitHub-Actions noch ein CurseForge-Release gestartet.
-- Die eigene Code-Lizenz ist eine noch offene Eigentuementscheidung. **MIT** erlaubt auch kommerzielle Weiterverwendung; **GPL-3.0** verpflichtet bei Weitergabe abgeleiteter Programme unter bestimmten Bedingungen zur Quellcodebereitstellung. Optionen, Abgrenzung der Fremddaten und Konsequenzen siehe `LIZENZ_ENTSCHEIDUNG_DE.md`. Die Blizzard-Regel erzwingt keine bestimmte OSI-Lizenz. Keine Fremdcode-Lizenzen stillschweigend uebernehmen.
+- **Code-Lizenz entschieden: `GPL-3.0-only`** fuer eigene Lua-/Python-Sourcen und Tests. Lizenzvolltext: `LICENSE` und fuer das separate Addon-Paket `WoWMarket/LICENSE.txt`. Fremde Daten, Spielkunst und Marken sind ausgenommen. Siehe `LIZENZ_ENTSCHEIDUNG_DE.md`. Die Blizzard-Regel erzwingt keine bestimmte OSI-Lizenz. Keine Fremdcode-Lizenzen stillschweigend uebernehmen.
 - Fuer einen oeffentlichen Repo-Upload muss geprueft werden, dass nur eigene freigegebene Sourcen und lizenzierte Dateien enthalten sind. Externe Datensnapshots mit ungeklärten Rechten bleiben draussen.
 
 ## CurseForge-Schritte nach bestandenen Gates
@@ -53,4 +53,4 @@ Stand 09.11.2026 · Entwicklungsstand Alpha 0.0.8, **KEINE Rechts-/Blizzard-Abna
 
 ## Aktueller Release-Status
 
-**STOP – oeffentliche Veroeffentlichung noch nicht freigegeben.** Offene Gates: reproduzierbarer Forever-Client-Test; korrekt lizenzierter Code/Markenassets; sachlicher Quellenhinweis; echte Performance-Messung; erst nach Datenerlaubnis ein oeffentlicher Vollimport. Eine oeffentliche Nur-Local-Snapshot-Alpha kann nach Client-Test auch ohne externe Daten veroeffentlicht werden, muss aber die leere Referenzdatenbank klar benennen.
+**STOP – oeffentliche Veroeffentlichung noch nicht freigegeben.** Offene Gates: reproduzierbarer Forever-Client-Test; Pruefung etwaiger Fremdassets und Marken; sachlicher Quellenhinweis; echte Performance-Messung; erst nach Datenerlaubnis ein oeffentlicher Vollimport. Der eigene Code ist GPL-3.0-only-lizenziert. Eine oeffentliche Nur-Local-Snapshot-Alpha kann nach Client-Test auch ohne externe Daten veroeffentlicht werden, muss aber die leere Referenzdatenbank klar benennen.
