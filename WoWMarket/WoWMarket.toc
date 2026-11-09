@@ -1,0 +1,18 @@
+## Interface: 16001
+## Title: WoW-Market
+## Notes: Haendler, Waren, Orte und Auktionshauspreise fuer WoW Forever
+## Version: 0.0.8-alpha
+## Author: CrobIT-Solution
+## SavedVariables: CrobITMarketDB
+## OptionalDeps: QuestieDB
+
+Data/Vendors.lua
+Core.lua
+VendorScanner.lua
+OptionalQuestie.lua
+VendorSearch.lua
+AuctionScanner.lua
+MapActions.lua
+Links.lua
+UI.lua
+Minimap.lua

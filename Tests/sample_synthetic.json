@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "provider": "SYNTHETISCHE TESTDATEN - NICHT ECHT",
+  "attributionUrl": "",
+  "vendors": [
+    {
+      "id": 90000001,
+      "name": "Testhaendler Nord",
+      "zone": "Testzone",
+      "mapID": 1,
+      "x": 42.5,
+      "y": 65.0,
+      "seenInForever": false,
+      "items": [
+        {"id": 90000011, "name": "Testware Alpha", "priceCopper": 80000, "stackCount": 1, "numAvailable": -1, "hasExtendedCost": false},
+        {"id": 90000012, "name": "Testware Beta", "priceCopper": 0, "stackCount": 5, "numAvailable": 20, "hasExtendedCost": true}
+      ]
+    },
+    {
+      "id": 90000002,
+      "name": "Testhaendler Sued",
+      "zone": "Andere Testzone",
+      "mapID": 2,
+      "x": 10.5,
+      "y": 82.25,
+      "seenInForever": null,
+      "items": [
+        {"id": 90000011, "name": "Testware Alpha", "priceCopper": 92500, "stackCount": 1, "numAvailable": -1, "hasExtendedCost": false}
+      ]
+    }
+  ]
+}

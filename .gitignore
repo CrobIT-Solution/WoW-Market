@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+DataAgent/raw/
+DataAgent/snapshots/
+DataAgent/out/
+Tests/tmp/
+*.tmp
+*.log
+# Temporary WoW SavedVariables/character data should never be published
+WTF/
+SavedVariables/
+CrobITMarketDB.lua
+# Local packages and generated release archives
+*.zip
