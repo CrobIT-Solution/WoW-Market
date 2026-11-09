@@ -1,5 +1,17 @@
 # WoW-Market
 
+## Install in 3 steps (Alpha test build)
+
+**[Download WoW-Market installation ZIP](https://github.com/CrobIT-Solution/WoW-Market/raw/refs/heads/main/Downloads/WoW-Market_Alpha_0.0.8_Install.zip)** — do **not** use GitHub's "Code → Download ZIP" because that also includes developer files.
+
+1. Unzip the download.
+2. Copy its **`AddOns`** folder into WoW Forever's existing **`Interface`** folder. Merge folders if asked; keep other addons.
+3. Restart WoW, enable WoW-Market, click the gold coin on your minimap.
+
+Correct result: `Interface/AddOns/WoWMarket/WoWMarket.toc`. No Python, installer or other software. [Detailed German guide](INSTALLATION_DE.md).
+
+**Alpha only:** Not yet tested in the live WoW Forever client; reference vendor data are currently empty.
+
 **Free, independent World of Warcraft: Forever addon – ALPHA 0.0.8, not yet verified in the live game client.**
 
 WoW-Market lets players record merchant inventory while opening merchants normally, search collected information, inspect zones and compare optional manually collected auction snapshots. Click the **coin icon on the minimap** to open the interface. No chat command required. The addon does not automate any in-game action, browse the web, fetch APIs or upload player information. If QuestieDB is already installed, the addon can use its public Lua API for optional, clearly labelled NPC/item name and possible spawn hints; this data is not bundled or represented as a verified map point.

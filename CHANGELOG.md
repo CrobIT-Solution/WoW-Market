@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased – Einfachere Spielerinstallation
+- Ein manuelles Installations-ZIP mit genau einem Addon-Ordner `AddOns/WoWMarket/` bereitgestellt; Nutzer kopieren `AddOns` direkt nach `Interface`.
+- Entwicklerdateien und Rohdaten vom Spielerdownload getrennt; direkte Downloadlinks, Installations-Kurzanleitung und separater Offline-Paketgenerator ergaenzt.
+- Synthetischer Strukturtest fuer ZIP-Inhalt, TOC-Vollstaendigkeit und GPL-Lizenz ergaenzt. Kein echter WoW-Client-Test und kein CurseForge-Release.
+
+
 ## Unreleased – Lizenzierung
 - Eigenen Addoncode, Python-Werkzeuge und Tests unter GPL-3.0-only gestellt.
 - Volltext unter `LICENSE` und `WoWMarket/LICENSE.txt`; TOC und Reiter „Quellen & Recht“ aktualisiert.

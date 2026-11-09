@@ -1,5 +1,17 @@
 # WoW-Market – WoW Forever
 
+## Installation fuer Spieler – ein Ordner
+
+**[WoW-Market Alpha 0.0.8 herunterladen](https://github.com/CrobIT-Solution/WoW-Market/raw/refs/heads/main/Downloads/WoW-Market_Alpha_0.0.8_Install.zip)** — nur das Installations-ZIP, **nicht** "Code → Download ZIP".
+
+1. ZIP entpacken.
+2. Den enthaltenen **`AddOns`**-Ordner in den bestehenden WoW-Ordner **`Interface`** kopieren und ggf. zusammenfuehren.
+3. WoW starten, Addon aktivieren, Goldmuenze an der Minimap anklicken.
+
+Fertig: `Interface\\AddOns\\WoWMarket\\WoWMarket.toc`. Keine weiteren Programme oder Python. [Kurzanleitung](INSTALLATION_DE.md).
+
+**Alpha-Testfassung:** Noch nicht im echten Forever-Client abgenommen und ohne importierte externe Haendlerdaten.
+
 **Alpha 0.0.8 (lokale Testfassung, 09.11.2026)** · Ziel: World of Warcraft Forever 1.60.1 / Interface 16001.  
 **WICHTIG: Nicht im echten Forever-Client getestet; noch keine oeffentliche Release-Freigabe.**
 
@@ -65,7 +77,7 @@ Der Everloot-Importer kann mit `--report <Pfad>` eine **aggregierte** Qualitaets
 
 ## Quellcode und Freigabe
 
-Der vollstaendige eigene Alpha-0.0.8-Quellcode ist unter https://github.com/CrobIT-Solution/WoW-Market **oeffentlich (Public)** sichtbar. Die Lizenz fuer eigenen Code ist noch nicht festgelegt; Entscheidungsvorlage: `LIZENZ_ENTSCHEIDUNG_DE.md`. Das Addon ist **noch nicht** im echten Forever-Client abgenommen. Keine Freigabe auf CurseForge. Ein echter Import fremder Beobachtungsdaten braucht ein getrenntes Daten-/Lizenzgate.
+Der vollstaendige eigene Alpha-0.0.8-Quellcode ist unter https://github.com/CrobIT-Solution/WoW-Market **oeffentlich (Public)** sichtbar. Die eigene Codelizenz ist GPL-3.0-only; siehe `LIZENZ_ENTSCHEIDUNG_DE.md`. Das Addon ist **noch nicht** im echten Forever-Client abgenommen. Keine Freigabe auf CurseForge. Ein echter Import fremder Beobachtungsdaten braucht ein getrenntes Daten-/Lizenzgate.
 
 ## Lizenz des eigenen Quellcodes
 

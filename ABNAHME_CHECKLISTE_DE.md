@@ -47,3 +47,9 @@ Fuer jeden Test eintragen: **PASS / FAIL / NICHT GETESTET**, bei FAIL die angeze
 | Performance grosser Datenbestands- und AH-Abfragen | NICHT GETESTET | |
 
 **Freigaberegel:** Solange ein Pflichtgate NICHT GETESTET oder FAIL ist, kein oeffentlicher WoW-Market-Release. GitHub Public ist nur Quellcode-Veroeffentlichung.
+
+## Benutzerfreundliche Installation – ausstehende echte Pruefung
+
+- [ ] `Downloads/WoW-Market_Alpha_0.0.8_Install.zip` entpackt und dessen **einen Ordner** `AddOns` in den vorhandenen Ordner `Interface` kopiert, ohne andere Addons zu loeschen.
+- [ ] Danach `Interface/AddOns/WoWMarket/WoWMarket.toc` vorhanden; kein doppelter WoWMarket-Ordner und keine Entwicklertools.
+- [ ] Spiel erkennt WoW-Market nach Neustart ohne externe Installation und ohne Pflichtabhaengigkeit von QuestieDB.

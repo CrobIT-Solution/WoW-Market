@@ -17,3 +17,8 @@ Stand: 09.11.2026. Verbindliches Repository: https://github.com/CrobIT-Solution/
 4. Erst nach den erforderlichen Gates ueber eine CurseForge-Alpha entscheiden.
 
 **Wichtig:** Public GitHub-Code ist nicht gleich CurseForge-Release oder eine formale Freigabe durch Blizzard.
+## Endnutzer-Installationspaket
+
+Fuer manuelle Testinstallationen gibt es jetzt [Downloads/WoW-Market_Alpha_0.0.8_Install.zip](Downloads/WoW-Market_Alpha_0.0.8_Install.zip). Der Benutzer entpackt es und kopiert ausschliesslich den Ordner `AddOns` in den vorhandenen WoW-Ordner `Interface`. Im `AddOns`-Ordner liegt nur `WoWMarket` mit seinen benoetigten Dateien. Anleitung: [INSTALLATION_DE.md](INSTALLATION_DE.md).
+
+**Nicht mit dem GitHub-Quellcode-ZIP verwechseln.** Das Archiv wird ohne CI aus dem `WoWMarket`-Ordner erstellt; der Buildhelfer `Tools/build_install_package.py` verwendet nur Python-Standardbibliothek. Das spaetere CurseForge-Upload-ZIP braucht dagegen den obersten Ordner `WoWMarket/` statt `AddOns/`. Der echte Client-Test ist unveraendert ausstehend.

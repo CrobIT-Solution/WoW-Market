@@ -41,7 +41,7 @@ Stand 09.11.2026 · Entwicklungsstand Alpha 0.0.8, **KEINE Rechts-/Blizzard-Abna
 1. Im Autorenportal https://authors.curseforge.com/#/projects/create/choose-game ein neues **World of Warcraft**-Addon anlegen.
 2. Einzigartigen Titel **WoW-Market**, englische Kurz-/Langbeschreibung, passende Kategorien (Auction & Economy / Map & Minimap), eigene Icondatei (keine fremden Markenbilder), Lizenz und ggf. Source-Link angeben. CurseForge fordert laut seiner Hilfe Projektbeschreibung und Titel in **Englisch**.
 3. Richtiges Flavor **Forever** und gepruefte Spielversion **1.60.1**, Interface **16001** waehlen. Nicht versehentlich Retail/Midnight auswaehlen.
-4. Reines Addon-ZIP mit oberstem Ordner `WoWMarket/` hochladen. `DataAgent`, Python-Skripte, Tests, API-Keys, Unterlagen und Design-Konzept gehoeren **nicht** in das Ingame-Installationspaket.
+4. Das **manuelle GitHub-Installations-ZIP** benutzt oben `AddOns/`, damit Spieler diesen Ordner nach `Interface/` kopieren koennen. Fuer CurseForge stattdessen ein **separates** ZIP mit `WoWMarket/` als oberstem Ordner vorbereiten; niemals das manuelle `AddOns/`-Archiv ungeprueft hochladen. `DataAgent`, Python-Skripte, Tests, API-Keys, Unterlagen und Design-Konzept gehoeren **nicht** in das Ingame-Installationspaket.
 5. Echte Screenshots aus laufendem WoW nach Test nutzen. Die fruehere KI-Konzeptgrafik ist **kein echter Spiel-Screenshot** und darf nicht als Funktionsbeweis ausgegeben werden.
 6. Als **Alpha** kennzeichnen; korrekte Funktionen und bekannte Grenzen offen beschreiben. Freigabe durch CurseForge-Moderation abwarten. Erst spaeter echte Beta/Release nach Live-Tests.
 
@@ -54,3 +54,7 @@ Stand 09.11.2026 · Entwicklungsstand Alpha 0.0.8, **KEINE Rechts-/Blizzard-Abna
 ## Aktueller Release-Status
 
 **STOP – oeffentliche Veroeffentlichung noch nicht freigegeben.** Offene Gates: reproduzierbarer Forever-Client-Test; Pruefung etwaiger Fremdassets und Marken; sachlicher Quellenhinweis; echte Performance-Messung; erst nach Datenerlaubnis ein oeffentlicher Vollimport. Der eigene Code ist GPL-3.0-only-lizenziert. Eine oeffentliche Nur-Local-Snapshot-Alpha kann nach Client-Test auch ohne externe Daten veroeffentlicht werden, muss aber die leere Referenzdatenbank klar benennen.
+
+## Vereinfachte manuelle Testinstallation
+
+[Downloads/WoW-Market_Alpha_0.0.8_Install.zip](Downloads/WoW-Market_Alpha_0.0.8_Install.zip) ist ausschliesslich fuer manuelle Testinstallationen vorgesehen. ZIP entpacken, Ordner `AddOns` nach `Interface` kopieren und vorhandene Ordner zusammenfuehren. Keine zusaetzlichen Werkzeuge oder Entwicklerdateien notwendig. Vollstaendige Beschreibung: [INSTALLATION_DE.md](INSTALLATION_DE.md). Das ist keine offizielle CurseForge-Veroeffentlichung; der echte Client-Test bleibt offen.
