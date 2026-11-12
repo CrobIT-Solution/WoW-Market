@@ -1,0 +1,13 @@
+--- a/WoWMarket/UI.lua
++++ b/WoWMarket/UI.lua
+@@ -547,8 +547,9 @@
+             uiWidgets.sourceButtons.auction.text:SetText("Auktionshaus")
+         end
+         for kind,b in pairs(uiWidgets.sourceButtons) do
+             b.active=(kind==sourceKind)
+-            b:SetBackdropBorderColor(b.active and unpack(GREEN) or unpack(BRONZE))
++            local borderColor = b.active and GREEN or BRONZE
++            b:SetBackdropBorderColor(unpack(borderColor))
+         end
+     end
+     if reflowUI then reflowUI() end
