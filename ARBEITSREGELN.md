@@ -1,8 +1,8 @@
 # WoW-Addon-Zentrale – verbindlicher Entwicklungs- und Sicherungsstandard
 
-**Version:** 1.0 · **Beschluss:** 13.11.2026 · **Geltung:** neue und bestehende WoW-Addon-Projekte der WoW-Addon-Zentrale unter `CrobIT-Solution`.
+**Version:** 1.1 · **Grundbeschluss:** 13.11.2026 · **Ergänzung und Zentralübernahme:** 14.11.2026 · **Geltung:** neue und bestehende WoW-Addon-Projekte der WoW-Addon-Zentrale unter `CrobIT-Solution`.
 
-**Kanonische Quelle:** Diese Datei in `CrobIT-Solution/WoW-Market` auf `main`. Weitere Addon-Repositories verweisen hierher; ihre Hinweise sind keine abweichenden Regelkopien. Diese WoW-Regeln sind eigenständig und ersetzen oder erweitern keine CrobIT-Ökosystem-Freigaben.
+**Öffentlich lesbarer Spiegel der verbindlichen privaten Fassung V1.1:** Die interne kanonische Quelle ist `CrobIT-Solution/WoW-Forever-ProjectKnowledge/ARBEITSREGELN.md` auf `main`. Diese vollständige öffentliche Spiegelversion bleibt für Besucher der Addon-Repositories ohne private Zugriffsrechte nutzbar. Spiegel und private Hauptfassung sind bei Änderungen kontrolliert abzugleichen; die frühere Regel V1.0 bleibt im Git-Verlauf erhalten. Diese WoW-Regeln ersetzen oder erweitern keine CrobIT-Ökosystem-Freigaben.
 
 ## 1. Grundsätze
 
@@ -49,16 +49,32 @@
 - **Kein** automatischer Merge nach `main`, kein Tag/Release, CurseForge-Upload, CI-/Build-Lauf oder Deployment allein wegen der Dokumentations- oder Checkpoint-Regel.
 - Bestehende ausdrückliche Nur-lesend-, Nur-lokal-, Kein-Commit- und andere STOP-Vorgaben gehen vor. Scheitert ein Gate, nicht behaupten, es sei erfolgreich gesichert.
 
-## 6. Abschluss jedes Arbeitsdurchgangs
+## 6. Spielerfreundlichkeit ist ein verbindliches Abnahmekriterium
+
+**Wortlaut der Eigentümerentscheidung vom 14.11.2026:**
+
+> „Kann ein durchschnittlicher WoW-Spieler diese Funktion ohne Anleitung finden, verstehen und benutzen?“
+
+**Wenn die Antwort Nein lautet, ist die Funktion aus Benutzersicht noch nicht fertig.**
+
+- Für jede neue Funktion gesondert bewerten, ob sie ohne externe Anleitung **auffindbar, verständlich und bedienbar** ist; dazu zählen auch Einstellungen, Befehle, Hilfen, Fehlerhinweise und Statusanzeigen.
+- Ein erfolgreicher Quell-, Mock- oder Ingame-Funktionstest beweist **nicht automatisch** die Benutzerfreundlichkeit.
+- Im Checkpoint neben technischem Prüfstatus die UX-Frage als **Ja / Nein / Noch nicht geprüft** mit kurzer Begründung dokumentieren.
+- Bei **Nein** oder **Noch nicht geprüft** die Funktion nicht als benutzerfertig bezeichnen. Eindeutig als Alpha/Prototyp gekennzeichnete Zwischenstände dürfen weiterhin gesichert werden.
+- Eine behauptete UX-Ingame-Abnahme braucht einen tatsächlich durchgeführten Test; der reine Konzeptabgleich ist kein Spieler-Test.
+
+## 7. Abschluss jedes Arbeitsdurchgangs
 
 Kurz festhalten: **Was ist abgeschlossen oder warum STOP? Was folgt als Nächstes? Was empfiehlt Buddy?** Nur nachgewiesene Ergebnisse als fertig bezeichnen.
 
-## 7. WoW-Addon-Projekte beim Beschluss
+## 8. WoW-Addon-Projekte beim Beschluss
 
 - `CrobIT-Solution/WoW-Market`
 - `CrobIT-Solution/AdiBagsForever` (inklusive Konfigurationsmodul)
 - `CrobIT-Solution/LootOwner`
 - `CrobIT-Solution/QuestCompendiumForever`
+
+**Zusätzlich aufgenommen:** ForeverXPText (Alpha 0.0.1; GitHub-Repository noch offen).
 
 **Quelle des Verfahrens:** Für WoW angepasst nach den CrobIT-Ökosystem-Mechanismen DEC-040 (Abschluss), DEC-041 (Checkpoints/Übergaben), DEC-045/047 (gebündelte Eigenverantwortung), DEC-050 (Commit und Nachweis). Keine Übernahme produktspezifischer CrobIT-Sicherheits-/Infrastrukturfreigaben.
 
